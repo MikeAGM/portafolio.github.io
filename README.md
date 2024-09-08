@@ -1,2 +1,2 @@
 # portafolio.github.io
-Michael Gonzalez Linkin Portafolio
+Michael Gonzalez Linkein Portafolio
