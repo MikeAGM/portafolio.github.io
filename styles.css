@@ -1,69 +1,92 @@
 /* General styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: 'San Francisco', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    line-height: 1.8;
+    color: #333;
+    background-color: #ffffff; /* Start with white background */
+    transition: background-color 0.6s ease, color 0.6s ease; /* Smooth transition for both background and text color */
+    text-align: left; /* Align body text to the left */
 }
+
+/* Import Google Font for fallback */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
 /* Header */
 header {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
+    background-color: #000; /* Set black background */
+    color: #fff; /* Set text color to white */
+    display: flex;
+    align-items: center;
+    padding: 20px; /* Reduced padding for a more compact layout */
+}
+
+header img {
+    width: 100px; /* Smaller image size */
+    height: auto;
+    border-radius: 50%; /* Make the image round */
+    margin-right: 15px;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 2.5rem;
+    font-size: 2rem; /* Smaller font size for header */
 }
 
 header p {
-    margin: 10px 0;
+    font-size: 1rem; /* Smaller font size for paragraphs */
+}
+
+header a {
+    color: #4CAF50; /* Green color for links */
 }
 
 /* Section styling */
 section {
-    padding: 20px;
-    margin: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Align section content to the left */
+    padding: 60px;
+    margin: 40px auto;
+    border-radius: 12px;
+    max-width: 1200px; /* Adjusted width for more content space */
+    transition: background-color 0.6s ease, color 0.6s ease;
 }
 
-section h2 {
-    color: #0056b3;
-    margin-bottom: 10px;
+/* Projects Section */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Increased min-width for larger images */
+    gap: 30px; /* Increased space between projects */
+    margin-top: 20px;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+/* Larger Project Images */
+.project-item img {
+    width: 100%; /* Keep the image responsive */
+    height: auto; /* Ensure it maintains aspect ratio */
+    max-width: 600px; /* Set a max width */
+    max-height: 300px; /* Set a max height to prevent large images */
+    border-radius: 5px; /* Rounded corners for the images */
+    object-fit: cover; /* Ensures that the image maintains its aspect ratio */
+    margin: 0 auto; /* Center the images */
 }
 
-ul li {
-    padding: 5px 0;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
+.project-item {
+    border: 1px solid #ddd; /* Light border around each project */
+    padding: 20px; /* Increased padding */
+    background-color: #f9f9f9;
+    border-radius: 8px;
     text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    max-width: 100%; /* Ensure projects span the full grid column width */
 }
 
-a {
-    color: #0056b3;
-    text-decoration: none;
+.project-item h3 {
+    margin: 15px 0 10px;
+    font-size: 1.5rem; /* Larger font size for the project title */
+    color: #333; /* Darker color to ensure readability */
+    font-weight: bold; /* Optional: Make it bold for better visibility */
 }
 
-a:hover {
-    text-decoration: underline;
+.project-item p {
+    font-size: 1.2rem; /* Larger font size for the project description */
+    color: #555;
 }
